@@ -5,8 +5,6 @@ ranks = ["two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
 value = {"two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10, "king": 10,
          "queen": 10, "jack": 10, "ace": 11}
 
-# player_Value = 0
-# dealer_Value = 0
 
 player_Amount = 100
 
@@ -19,13 +17,11 @@ class CardAndValue:
 
     def __init__(self):
 
-        # self.deck_card_Value = {}
         for suit in suits:
             for rank in ranks:
                 if rank in value.keys():
                     temp = "" + suit + " of " + rank
                     self.deck_card_Value[temp] = value.get(rank)
-        # print(self.deck_card_Value) # print all cards and its value
 
     # random card distribute to player and dealer
     @classmethod
